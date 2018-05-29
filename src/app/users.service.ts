@@ -21,41 +21,4 @@ export class UsersService {
             });
         }));
     }
-
-
-    // users = [
-    //     {
-    //         title: 'title1',
-    //         text: 'I am a very simple card. I am good at containing small bits of information.'
-    //     },
-    //     {
-    //         title: 'title2',
-    //         text: 'I am convenient because I require little markup to use effectively.'
-    //     },
-    //     {
-    //         title: 'title3',
-    //         text: 'I am convenient because I require little markup to use effectively.'
-    //     },
-    //     {
-    //         title: 'title4',
-    //         text: 'I am convenient because I require little markup to use effectively.'
-    //     },
-    //     {
-    //         title: 'title5',
-    //         text: 'I am convenient because I require little markup to use effectively.'
-    //     },
-    //     {
-    //         title: 'title6',
-    //         text: 'I am convenient because I require little markup to use effectively.'
-    //     },
-    //     {
-    //         title: 'title7',
-    //         text: 'I am convenient because I require little markup to use effectively.'
-    //     },
-    //     {
-    //         title: 'title8',
-    //         text: 'I am convenient because I require little markup to use effectively.'
-    //     }
-    // ]
-
 }

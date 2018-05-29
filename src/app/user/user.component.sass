@@ -1,4 +1,17 @@
-.card-content
-    height: 150px
-.card-title
-    text-shadow: 5px 2px 2px rgba(80, 80, 85, 1)
+.card
+    .card-content
+        height: 120px
+        overflow: hidden
+    .card-title
+        font-size: 16px
+        text-shadow: 5px 2px 2px rgba(80, 80, 85, 1)
+        &.checked
+            font-weight: bold
+            color: #26a69a
+    .card-action
+        text-align: center
+.hovered
+    transform: scale(1.05)
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5)
+    transition: .5s all
+    z-index: 10
