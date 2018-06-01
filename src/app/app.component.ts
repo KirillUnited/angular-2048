@@ -8,13 +8,4 @@ import { UsersService } from './users.service';
   providers: [UsersService]
 })
 export class AppComponent {
-  users = [];
-  searchStr='';
-  constructor(private usersService: UsersService) {}
-  ngOnInit() {
-    // this.users = this.usersService.users;
-    this.usersService.getUsers().subscribe(users => 
-      this.users = users
-    )
-  }
 }
