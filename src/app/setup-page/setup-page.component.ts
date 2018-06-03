@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { UsersService } from '../users.service';
 
 @Component({
@@ -8,7 +8,8 @@ import { UsersService } from '../users.service';
 })
 export class SetupPageComponent implements OnInit {
 
-  @Input() size;
+  size;
+  public myColor = '';
 
   constructor(private usersService: UsersService) { }
 
@@ -17,6 +18,10 @@ export class SetupPageComponent implements OnInit {
   }
   onChange() {
     this.usersService.setSize(+this.size);
+    console.log(+this.size);
+  }
+  changeColor(color) {
+    this.myColor = 'text_red';
   }
 
 }

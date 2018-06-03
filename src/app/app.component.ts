@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { UsersService } from './users.service';
 
 @Component({
@@ -8,4 +8,5 @@ import { UsersService } from './users.service';
   providers: [UsersService]
 })
 export class AppComponent {
+
 }

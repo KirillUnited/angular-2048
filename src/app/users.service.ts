@@ -5,12 +5,8 @@ import { map } from 'rxjs/operators';
 
 @Injectable()
 export class UsersService {
-    setSize(size) {
-        this.size = size;
-        console.log(this.size);
-    }
     size = 8;
-    constructor(private http: HttpClient) { }
+    constructor(private http: HttpClient) { };
     URL = 'https://randomuser.me/api/?inc&results=' + this.size + '&nat=gb';
     getUsers(): Observable<URL[]> {
         return this.http.get(this.URL).pipe(map(data => {
@@ -24,5 +20,9 @@ export class UsersService {
                 }
             });
         }));
+    };
+    setSize(size) {
+        this.size = size;
+        console.log(size);
     }
 }

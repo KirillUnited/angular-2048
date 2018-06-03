@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { UsersService } from '../users.service';
 
 @Component({
@@ -7,13 +7,21 @@ import { UsersService } from '../users.service';
   styleUrls: ['./home-page.component.css']
 })
 export class HomePageComponent implements OnInit {
+  theme;
   users = [];
-  searchStr='';
-  constructor(private usersService: UsersService) {}
+  searchStr = '';
+  constructor(private usersService: UsersService) { }
   ngOnInit() {
     // this.users = this.usersService.users;
-    this.usersService.getUsers().subscribe(users => 
+    this.usersService.getUsers().subscribe(users =>
       this.users = users
     )
+  }
+  onChange() {
+    if (this.theme == null) {
+      this.theme = 'bg_theme_dark';
+    } else {
+      this.theme = null;
+    }
   }
 }
