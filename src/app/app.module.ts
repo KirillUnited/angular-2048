@@ -11,6 +11,7 @@ import { SearchPipe } from './search.pipe';
 import { HomePageComponent } from './home-page/home-page.component';
 import { SetupPageComponent } from './setup-page/setup-page.component';
 import { RouterModule } from '@angular/router'
+import { UsersService } from './users.service';
 
 const routes = [
   {path: '', component: HomePageComponent},
@@ -33,7 +34,7 @@ const routes = [
     FormsModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
